@@ -1,7 +1,145 @@
+@tailwind base;
+@tailwind components;
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&display=swap');
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+
+.footer {
+
+  background-image: url(./components/asset/wave\ \(4\).svg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%, 100%;
+}
+
+.social__icon li a:hover{
+
+  transform: translateY(-10px);
+}
+
+footer .wave{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/src/components/asset/wave.png);
+  background-size: 1000px 100px;
+
+}
+
+footer .wave#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animatewave 4s linear infinite;
+}
+footer .wave#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animatewave___2 4s linear infinite;
+}
+footer .wave#wave3{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animatewave___3 3s linear infinite;
+}
+footer .wave#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animatewave___4 3s linear infinite;
+}
+@keyframes animatewave 
+{
+  0%{
+    background-position-x:1000px ;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+@keyframes animatewave___2 
+{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+@keyframes animatewave___3 
+{
+  0%{
+    background-position-x:1000px ;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+@keyframes animatewave___4 
+{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+/* scrollbar design */
+
+
+.scrollbar {
+  width: 100%;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+/* //scroll bar bg color// */
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #0D1425;
+}
+
+/* scroll bar kornar color */
+#style-2::-webkit-scrollbar {
+  width: 7px;
+  background-color: #0D1425;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(253, 246, 246, 0.3); */
+  background-color: #7689a5;
+}
+
+
+/* ========================= */
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  background: #0D1425;
+  color: white;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'lato', 'Poppins','Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Hind Siliguri',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,3 +149,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components {
+  .input {
+    @apply p-2 w-full
+     rounded-md mt-3 bg-slate-800 duration-1000 outline-none  text-white 
+     focus:placeholder-slate-900
+     focus:bg-slate-500
+      ease-in-out
+      placeholder:italic
+  
+  }
+}
+@tailwind utilities;
