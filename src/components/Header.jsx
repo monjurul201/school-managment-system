@@ -8,6 +8,7 @@ import Contact from './Contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Footer from './Footer';
+import Feathers from './Feathers';
 
 
 AOS.init();
@@ -22,6 +23,7 @@ const Header = () => {
                 <Hero/>
                 <Notice/>
                 <Contact/>
+                <Feathers/>
                 <Footer/>
         </div>
     );

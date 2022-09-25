@@ -4,7 +4,6 @@ import Header from './components/Header';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import StudentInformation from './components/StudentInformation';
 import TeachersInformation from './components/TeachersInformation';
-import Footer from './components/Footer';
 import Result from './Result';
 
 
