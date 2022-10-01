@@ -101,18 +101,19 @@ const StudentInformation = () => {
         <button className='text-2xl hover:bg-slate-800 hover:scale-105 ease-in-out transition-all duration-500 border border-1 border-slate-400 outline-none p-2 rounded-full w-48'>
           <Link to='/'> হোমে ফিরে <span className='text-[#fa9715]'>যাই </span> </Link>
         </button>
+       
       </div>
 
      <div className='mb-10 pb-10'>
      {!search ? (<DataTable
         conditionalRowStyles={conditionalRowStyles}
         className=''
-        title={`Total Student: ${student.length}`}
+        title={`মোট শিক্ষার্থী: ${student.length.toLocaleString("bn-BD")}`}
         columns={columns}
         data={student}
         pagination
         fixedHeader
-        fixedHeaderScrollHeight='400px'
+        fixedHeaderScrollHeight='600px'
         highlightOnHover
         subHeader
         subHeaderComponent={
@@ -132,7 +133,7 @@ const StudentInformation = () => {
         <DataTable
           conditionalRowStyles={conditionalRowStyles}
           className=''
-          title={`Total Student: ${student.length}`}
+          title={`মোট শিক্ষার্থী: ${student.length.toLocaleString("bn-BD")}`}
           columns={columns}
           data={filterStudents}
           pagination

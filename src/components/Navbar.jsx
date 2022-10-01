@@ -102,7 +102,7 @@ const Navbar = () => {
                         }
                     </div>
                 </div>
-                <ul className={`duration-500  ease-in-out ${open ? 'block mt-[397px] absolute  text-sm bg-slate-200 w-[60%] z-10 right-0 text-black' : 'hidden  md:flex md:justify-start md:ml-3 -right-[350px] text-white'} `}>
+                <ul className={` ${open ? 'block mt-[397px] absolute  text-sm bg-slate-200 w-[60%] z-10 right-0 text-black' : 'hidden  md:flex md:justify-start md:ml-3 -right-[350px] text-white'} `}>
 
                     <li className='ml-2 p-3 uppercase  font-mono font-thin   text- md:text-[18px] hover:bg-white cursor-pointer hover:text-neutral-900'>
                         <Link to='/'>Home</Link>

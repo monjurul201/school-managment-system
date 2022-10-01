@@ -28,10 +28,10 @@ const Notice = () => {
                                     {
                                         data.map((notice, index) =>
                                             <tr className='border border-t-1 mr-2  border-slate-500' key={index}>
-                                                <td className='text-sm h-10 px-2'>
+                                                <td className='text-sm lg:text-xl h-10 px-2'>
                                                     {notice.title}
                                                 </td>
-                                                <td className='  text-sm cursor-pointer h-10 border-l border-slate-500 px-2 w-[117px]'>
+                                                <td className='  text-sm lg:text-xl cursor-pointer h-10 border-l border-slate-500 px-2 w-[117px] lg:w-[147px]'>
                                                     <a  className='rounded-md border  border-cyan-700 p-1 text-[#f58e07] font-mono' href={notice.url2} target="_blank" rel="noopener noreferrer">
                                                         নোটির্স দেখুন
                                                     </a>

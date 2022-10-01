@@ -4,9 +4,9 @@ const Question = ({ question, ans }) => {
     const [open, setOpen] = useState(false)
     return (
         <div className= ' mt-2 '>
-            <div onClick={() => setOpen(!open)} className={`hover:bg-blue-600 ${open ? 'bg-blue-600  cursor-pointer mt-2 rounded-md shadow-sm shadow-slate-800 h-10 flex justify-between pl-3 items-center' : ' cursor-pointer bg-slate-800 mt-2 rounded-md shadow-sm shadow-slate-800 h-10 flex justify-between pl-3 items-center'}`}>
+            <div onClick={() => setOpen(!open)} className={ ` hover:text-white ${open ? ' bg-[orange] cursor-pointer mt-2 rounded-md shadow-sm shadow-slate-800 h-10 flex justify-between pl-3 items-center' : ' cursor-pointer bg-slate-800 mt-2 rounded-md shadow-sm shadow-slate-800 h-10 flex justify-between pl-3 items-center'}`}>
                 <div  >
-                    <h2 className={` hover:text-white ${open ? "text-white text-md" : 'text-md text-slate-500'}`} >{question}</h2>
+                    <h2 className={` text-md md:text-2xl lg:text-2xl ${open ? "text-[#f1f3f5] text-md lg:text-xl" : 'text-md text-slate-500'}`} >{question}</h2>
                 </div>
 
                 <div className='flex  justify-center items-center mr-5' >
@@ -15,7 +15,7 @@ const Question = ({ question, ans }) => {
             </div>
             <div className={` rounded-b-md ${!open ? ' duration-[500ms]' : 'duration-[500ms] pt-7'} bg-slate-800`}>
                 {
-                    open && <p className='p-3 -mt-5 text-slate-300 text-sm'> {ans}</p>
+                    open && <p className='p-2 -mt-5 text-slate-400 text-[19px]'> {ans}</p>
                 }
             </div>
 
